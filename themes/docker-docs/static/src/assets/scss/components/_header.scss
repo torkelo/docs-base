@@ -1,5 +1,5 @@
 .main-header {
-  padding: rem-calc(20) 0 rem-calc(20) rem-calc(20);
+  padding: 0 0 rem-calc(20) rem-calc(20);
   overflow: visible;
   position: relative;
   z-index: 90;
@@ -10,9 +10,14 @@
   > .row {
     margin: 0;
   }
-  .logo {
-    width: rem-calc(80);
+  .logo-container {
     display: block;
+    margin-top: 23px;
+  }
+  .logo {
+    width: rem-calc(48);
+    display: block;
+    float: left;
     @media #{$small-only} {
      display: block;
      margin: auto;
@@ -27,6 +32,19 @@
    }
    @media #{$large-up} {
      margin-left: -14px;
+   }
+ }
+ .logo-text {
+   font-size: 0.875rem;
+   font-weight: 400;
+   line-height: 16px;
+   margin: 6px 7px;
+   color: white;
+   float: left;
+   > div:last-of-type {
+     opacity: 0.7;
+     font-size: 0.5em;
+     font-weight: 400;
    }
  }
 }

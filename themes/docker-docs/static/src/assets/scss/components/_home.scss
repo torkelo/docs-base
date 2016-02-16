@@ -39,12 +39,19 @@
 }
 
 li.product-tile {
-  margin-bottom: 2rem;
   text-align: center;
   display: block;
   padding: 1rem;
-  border: 1px solid transparent;
   @extend %primary-transition;
+  > div {
+    border: 2px solid $docker-lt-gray;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 7px;
+    &:hover {
+      border: 2px solid $docker-blue;
+    }
+  }
   > a {
     display: block;
     &:hover {
@@ -62,13 +69,14 @@ li.product-tile {
     margin: auto;
     color: $docker-gray;
   }
-  &:hover {
-    border: 1px solid darken($docker-bg, 8%);
-  }
   p {
     color: $body-font-color;
   }
   .link {
     color: $secondary-color;
   }
+}
+
+section.products-list-container {
+  max-width: 100%;
 }
