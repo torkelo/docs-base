@@ -9,9 +9,11 @@
 	&::after {
 		@extend %wave;
 	}
-
 	h1,h2,h3,h4, p, a {
 		color: #fff;
+	}
+	h1,h2,h3,h4 {
+		letter-spacing: $label-letter-spacing;
 	}
 	p {
 		font-size: rem-calc(18);

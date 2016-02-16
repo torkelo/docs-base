@@ -23,7 +23,8 @@ ul.nav-global {
   a {
     font-family: $font-family-sans-serif-secondary;
     font-size: rem-calc(14);
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: $label-letter-spacing;
     color: #7a8491;
     padding: rem-calc(5) rem-calc(5);
     margin-bottom: rem-calc(5);
@@ -32,6 +33,7 @@ ul.nav-global {
       color: $secondary-color;
     }
   }
+
   a.button {
     background: #86d801;
     padding: rem-calc(10) rem-calc(30);
@@ -45,5 +47,29 @@ ul.nav-global {
   }
   @media #{$medium-only} {
     display: none;
+  }
+  .sub-nav {
+    position: absolute;
+    background: #FCFDFD;
+    border-radius: 5px;
+    display: none;
+    &:hover {
+      display: block;
+    }
+    > a {
+      display: block;
+      padding: 0 10px;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+        color: $docker-lt-blue;
+        background: #f3f3f3;
+      }
+    }
+  }
+  a:first-of-type:hover {
+    & + div {
+      display: block;
+    }
   }
 }

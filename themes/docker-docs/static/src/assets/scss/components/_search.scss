@@ -26,7 +26,7 @@ div.gsc-input-box {
   td.gsc-search-button {
     margin: 0;
     border: none;
-    background: transparent url(/dist/assets/images/icon-search-blue.svg) center center no-repeat;
+    background: none;
     position: absolute;
     top: 15px;
     right: 50px;
@@ -39,6 +39,9 @@ div.gsc-input-box {
       @extend %primary-transition;
       transform: scale(1.25, 1.25);
     }
+    input {
+      background: none;
+    }
   }
   input.gsc-search-button {
     visibility: hidden;
@@ -46,25 +49,25 @@ div.gsc-input-box {
   }
 
   ::-webkit-input-placeholder {
-    color: #0b8cb8;
+    color: white;
     font-size: rem-calc(30);
     font-family: $font-family-sans-serif;
   }
 
   :-moz-placeholder {
-    color: #0b8cb8;
+    color: white;
     font-size: rem-calc(30);
     font-family: $font-family-sans-serif;
   }
 
   ::-moz-placeholder {
-    color: #0b8cb8;
+    color: white;
     font-size: rem-calc(30);
     font-family: $font-family-sans-serif;
   }
 
   :-ms-input-placeholder {
-    color: #0b8cb8;
+    color: white;
     font-size: rem-calc(30);
     font-family: $font-family-sans-serif;
   }
@@ -78,10 +81,11 @@ div.gsc-input-box {
     height: 3rem !important;
     width: 100% !important;
     padding-left: 1.5rem !important;
-    padding-bottom: rem-calc(5) !important;
     line-height: 2.25rem;
     font-size: rem-calc(30);
     font-weight: 300;
+    background: $docker-lt-blue !important;
+    color: white !important;
     &:focus {
       border: none !important;
     }
