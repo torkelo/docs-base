@@ -3,6 +3,12 @@
   text-align: center;
   h1 {
     font-weight: 400;
+    @media #{$medium-only} {
+      display: none;
+    }
+    @media #{$small-only} {
+      display: none;
+    }
   }
   .cta {
     margin-top: 1rem;
@@ -65,12 +71,30 @@ li.product-tile {
   }
   svg {
     display: block;
-    width: 8rem;
-    margin: auto;
+    width: 25%;
+    height: 5.5rem;
     color: $docker-gray;
+    float: left;
+    height: 80px;
+    display: table-cell;
+    vertical-align: middle;
   }
   p {
     color: $body-font-color;
+    clear: both;
+    margin-top: 1em;
+    font-weight: 500;
+  }
+  h3 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    width: 65%;
+    display: table-cell;
+    vertical-align: middle;
+    height: 80px;
+    text-align: left;
+    padding-left: 5%;
+    text-align: left;
   }
   .link {
     color: $secondary-color;

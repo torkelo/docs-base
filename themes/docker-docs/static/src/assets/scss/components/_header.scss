@@ -19,20 +19,14 @@
     display: block;
     float: left;
     @media #{$small-only} {
-     display: block;
-     margin: auto;
-     margin-top: 0;
-     max-width: 175px;
-   }
-   @media #{$medium-only} {
-     display: block;
-     margin: auto;
-     margin-top: 0;
-     max-width: 175px;
-   }
-   @media #{$large-up} {
-     margin-left: -14px;
-   }
+      margin-left: 50px;
+    }
+    @media #{$medium} {
+      margin-left: 50px;
+    }
+    @media #{$large-up} {
+      margin-left: -14px;
+    }
  }
  .logo-text {
    font-size: 0.875rem;

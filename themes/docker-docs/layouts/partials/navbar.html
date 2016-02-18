@@ -1,54 +1,113 @@
 <aside class="nav-docs">
-  <nav id="multiple" data-accordion-group>
-    {{ partial "product-navbar.html" . }}
-    {{ $currentNode := . }}
-    {{ range .Site.Menus.main }}
-    <section data-accordion>
-      {{ if .HasChildren }}
-      <article data-accordion>
-        <button data-control class="split-button">
-          <a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
-          <span></span>
-        </button>
-        <div data-content>
-          {{ range .Children }}
-          {{if .HasChildren}}
-          <article data-accordion>
-            <button data-control style="margin-left: .75em;" class="split-button">
-              <a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
-              <span></span>
-            </button>
-            <div data-content>
-              {{ range .Children }}
-              {{if .HasChildren}}
-              <article data-accordion>
-                <button data-control class="split-button">
-                  <a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
-                  <span></span>
-                </button>
-                <div data-content>
-                  {{ range .Children }}
-                  <a data-link href="{{ .URL }}" class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }} {{ .Name }}</a>
-                  {{ end }}
-                </div>
-              </article>
-              {{else}}
-              <a data-link href="{{ .URL }}" style="margin-left: 1.25em;" class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }} {{ .Name }}</a>
-              {{end}}
-
-              {{end}}
-            </div>
-          </article>
-          {{else}}
-          <a data-link href="{{ .URL }}" class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }} {{ .Name }}</a>
-          {{end}}
-          {{end}}
-        </div>
-      </article>
-      {{else}}
-      <a data-link href="{{ .URL }}" class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">{{ .Pre }} {{ .Name }}</a>
-      {{end}}
-    </section>
-    {{end}}
+  <nav class="global-nav">
+    <ul>
+      <li>
+        <a>Docs >></a>
+      </li>
+      <li>
+        <a>Support</a>
+      </li>
+      <li>
+        <a>Training</a>
+      </li>
+      <li>
+        <a>Tech Blog</a>
+      </li>
+      <li>
+        <a>Blog</a>
+      </li>
+      <li>
+        <a>Docker Blog</a>
+      </li>
+    </ul>
   </nav>
+
+  <nav class="site-nav-docs">
+    <ul>
+      <li>
+        <a><< BACK</a>
+      </li>
+      <li>
+        <a>Get Started with Docker</a>
+      </li>
+      <li>
+        <a>Docker Toolbox</a>
+      </li>
+      <li>
+        <a>Engine</a>
+      </li>
+      <li>
+        <a>Machine</a>
+      </li>
+      <li>
+        <a>Swarm</a>
+      </li>
+      <li>
+        <a>Compose</a>
+      </li>
+      <li>
+        <a>Docker Trusted Registry</a>
+      </li>
+      <li>
+        <a>Docker Hub</a>
+      </li>
+      <li>
+        <a>Docker Cloud</a>
+      </li>
+      <li>
+        <a>Universal Control Plane</a>
+      </li>
+      <li>
+        <a>Component Projects</a>
+      </li>
+      <li>
+        <a>Open Source Guide</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="prodict-nav">
+    <ul>
+      <li>
+        <a><< BACK</a>
+      </li>
+      <li>
+        <a>Introducing Docker Hub</a>
+      </li>
+      <li>
+        <a>Your Docker Hub account</a>
+      </li>
+      <li>
+        <a>Repositories on Docker Hub</a>
+      </li>
+      <li>
+        <a>Automated Builds</a>
+      </li>
+      <li>
+        <a>Webhooks for automated builds</a>
+      </li>
+      <li>
+        <a>Automated Builds with Bitbucket</a>
+      </li>
+      <li>
+        <a>Automated Builds from Github</a>
+      </li>
+      <li>
+        <a>Teams & Organizations</a>
+      </li>
+      <li>
+        <a>Official Repositories on Docker Hub</a>
+      </li>
+      <li>
+        <a>Universal Control Plane</a>
+      </li>
+      <li>
+        <a>Component Projects</a>
+      </li>
+      <li>
+        <a>Open Source Guide</a>
+      </li>
+    </ul>
+  </nav>
+
 </aside>
