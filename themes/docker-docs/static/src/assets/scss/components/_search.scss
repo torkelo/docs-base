@@ -23,6 +23,18 @@ div.gsc-input-box {
 
 .search-large {
   height: rem-calc(86);
+  @media #{$medium-only} {
+    position: absolute;
+    width: 100%;
+    margin-top: -141px;
+    z-index: 99;
+  }
+  @media #{$small-only} {
+    position: absolute;
+    width: 97%;
+    margin: -141px 0 0 1em;
+    z-index: 99;
+  }
   td.gsc-search-button {
     margin: 0;
     border: none;
