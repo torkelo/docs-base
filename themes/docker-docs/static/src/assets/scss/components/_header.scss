@@ -43,11 +43,12 @@
  }
 }
 
-.left-off-canvas-toggle {
+.left-off-toggle {
 	position: absolute;
 	left: 0.9375rem;
 	top: 26px;
 	z-index: 99;
+  cursor: pointer;
 	@media #{$large-up} {
 		display: none;
 	}

@@ -1,0 +1,56 @@
+.nav-docs {
+
+  nav.menu.active {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .site-nav-docs {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .nav-product {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+}
+
+.inner-wrap {
+  left: 0px;
+
+  @media #{$small-only} {
+    margin-left: 251px;
+  }
+  @media #{$medium} {
+    margin-left: 251px;
+  }
+}
+
+.inner-wrap.slide-right {
+  margin-left: 251px;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+}
+
+.inner-wrap.slide-left {
+  margin-left: 0px;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+}
+
+.inner-wrap.active {
+  margin-left: 251px;
+}
