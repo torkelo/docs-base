@@ -1,8 +1,10 @@
 <aside class="nav-docs">
-  <nav class="global-nav">
+
+  <!-- {{ partial "engine-navbar.html" . }} -->
+  <nav class="global-nav menu">
     <ul>
       <li>
-        <a>Docs >></a>
+        <a class="site-nav-docs-link">Docs <span>>></span></a>
       </li>
       <li>
         <a>Support</a>
@@ -22,92 +24,89 @@
     </ul>
   </nav>
 
-  <nav class="site-nav-docs">
+  <nav class="site-nav-docs menu">
     <ul>
       <li>
-        <a><< BACK</a>
+        <a class="nav-docs-back"><span><<</span> BACK</a>
       </li>
       <li>
         <a>Get Started with Docker</a>
       </li>
       <li>
-        <a>Docker Toolbox</a>
+        <a class="product-docker-toolbox-link">Docker Toolbox <span>>></span></a>
       </li>
       <li>
-        <a>Engine</a>
+        <a path="engine" class="product-engine-link">Engine <span>>></span></a>
       </li>
       <li>
-        <a>Machine</a>
+        <a class="product-machine-link">Machine <span>>></span></a>
       </li>
       <li>
-        <a>Swarm</a>
+        <a class="product-swarm-link">Swarm <span>>></span></a>
       </li>
       <li>
-        <a>Compose</a>
+        <a class="product-compose-link">Compose <span>>></span></a>
       </li>
       <li>
-        <a>Docker Trusted Registry</a>
+        <a class="product-docker-trusted-registry-link">Docker Trusted Registry <span>>></span></a>
       </li>
       <li>
-        <a>Docker Hub</a>
+        <a class="product-docker-hub-link">Docker Hub <span>>></span></a>
       </li>
       <li>
-        <a>Docker Cloud</a>
+        <a class="product-docker-cloud-link">Docker Cloud <span>>></span></a>
       </li>
       <li>
-        <a>Universal Control Plane</a>
+        <a class="product-universal-control-plane-link">Universal Control Plane <span>>></span></a>
       </li>
       <li>
-        <a>Component Projects</a>
+        <a class="product-component-projects-link">Component Projects <span>>></span></a>
       </li>
       <li>
-        <a>Open Source Guide</a>
+        <a class="product-open-source-link">Open Source Guide <span>>></span></a>
       </li>
     </ul>
   </nav>
 
-  <nav class="prodict-nav">
-    <ul>
-      <li>
-        <a><< BACK</a>
-      </li>
-      <li>
-        <a>Introducing Docker Hub</a>
-      </li>
-      <li>
-        <a>Your Docker Hub account</a>
-      </li>
-      <li>
-        <a>Repositories on Docker Hub</a>
-      </li>
-      <li>
-        <a>Automated Builds</a>
-      </li>
-      <li>
-        <a>Webhooks for automated builds</a>
-      </li>
-      <li>
-        <a>Automated Builds with Bitbucket</a>
-      </li>
-      <li>
-        <a>Automated Builds from Github</a>
-      </li>
-      <li>
-        <a>Teams & Organizations</a>
-      </li>
-      <li>
-        <a>Official Repositories on Docker Hub</a>
-      </li>
-      <li>
-        <a>Universal Control Plane</a>
-      </li>
-      <li>
-        <a>Component Projects</a>
-      </li>
-      <li>
-        <a>Open Source Guide</a>
-      </li>
-    </ul>
+  <!-- <nav class="nav-loading menu">
+    !!!! LOADING SPINNER !!!!
+  </nav> -->
+
+  <nav class="product-engine nav-product menu">
+    <a class="site-nav-docs-back"><span><<</span> BACK</a>
+    {{ partial "engine-navbar.html" . }}
   </nav>
 
+  <!-- <nav class="global-nav active">
+  </nav>
+
+  <nav class="site-nav-docs">
+  </nav>
+
+  <nav class="product-docker-toolbox nav-product">
+  </nav>
+
+  <nav class="product-machine nav-product">
+  </nav>
+
+  <nav class="product-compose product nav-product">
+  </nav>
+
+  <nav class="product-docker-trusted-registry nav-product">
+  </nav>
+
+  <nav class="product-docker-hub nav-product">
+  </nav>
+
+  <nav class="product-docker-cloud nav-product">
+  </nav>
+
+  <nav class="product-universal-control-plane nav-product">
+  </nav>
+
+  <nav class="product-component-projects nav-product">
+  </nav>
+
+  <nav class="product-open-source-guide nav-product">
+  </nav> -->
 </aside>
