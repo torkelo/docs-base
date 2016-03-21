@@ -52,6 +52,10 @@ test: docs-build
 	docker run --rm "$(DOCKER_DOCS_IMAGE)"
 
 # clone required repos under devdeps folder
+# WARNING: Please note that flickerbox-test is a branch on a private fork, where the docs redesign is compatible with.
+#          This is a temporary situation and all the code will eventually merged to the master branch.
+#          Once the flickerbox-test is merged to master, the line in dev-deps-docker should be:
+#          @(if test -d devdeps/docker; then echo devdeps/docker found, skipping; else mkdir -p devdeps/docker; git clone https://github.com/docker/docker.git devdeps/docker; fi)
 dev-deps-docker:
 	@(if test -d devdeps/docker; then echo devdeps/docker found, skipping; else mkdir -p devdeps/docker; git clone -b flickerbox-test https://github.com/moxiegirl/docker.git devdeps/docker; fi)
 
