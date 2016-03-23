@@ -51,6 +51,32 @@ shell:
 test: docs-build
 	docker run --rm "$(DOCKER_DOCS_IMAGE)"
 
+# clone required repos under devdeps folder
+# WARNING: Please note that flickerbox-test is a branch on a private fork, where the docs redesign is compatible with.
+#          This is a temporary situation and all the code will eventually merged to the master branch.
+#          Once the flickerbox-test is merged to master, the line in dev-deps-docker should be:
+#          @(if test -d devdeps/docker; then echo devdeps/docker found, skipping; else mkdir -p devdeps/docker; git clone https://github.com/docker/docker.git devdeps/docker; fi)
+dev-deps-docker:
+	@(if test -d devdeps/docker; then echo devdeps/docker found, skipping; else mkdir -p devdeps/docker; git clone -b flickerbox-test https://github.com/moxiegirl/docker.git devdeps/docker; fi)
+
+# install dependencies for static
+dev-deps-static:
+	@(cd themes/docker-docs/static/ && npm install -g grunt-cli && npm install && bower install)
+
+# build static assets
+dev-build-static:
+	grunt build --gruntfile themes/docker-docs/static/Gruntfile.js
+
+# build static assets and docs image
+dev-build: dev-build-static docs-build
+
+# dev-build and run docs for docker engine
+dev-run: dev-build
+	make -f devdeps/docker/docs/Makefile
+
+# all dev tasks. Intended to be run only once at the beginning
+dev-all: dev-deps-docker dev-deps-static dev-run
+
 docs-build:
 #	( git remote | grep -v upstream ) || git diff --name-status upstream/release..upstream/docs ./ > ./changed-files
 #	echo "$(GIT_BRANCH)" > GIT_BRANCH
@@ -68,4 +94,3 @@ markdownlint:
 
 htmllint:
 		docker exec -it docker-docs-tools /usr/local/bin/linkcheck http://127.0.0.1:8000
-
