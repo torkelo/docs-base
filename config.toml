@@ -1,46 +1,26 @@
 baseurl = "http://localhost/"
 contentdir = "content"
 languageCode = "en-us"
-title = "Docker Docs"
+title = "Grafana Docs"
 theme = "docker-2016"
 canonifyurls = false
 relativeURLs = true
 verbose = true
-googleAnalytics = "GTM-WLGFZV"
-
+googleAnalytics = ""
 enableRobotsTXT = true
 disableSitemap = false
 
 # the index.xml files
 disableRSS = true
 
-[blackfriday]
-  fractions = false
-  smartDashes = false
-  plainIDAnchors = true
-  sourceRelativeLinksEval = true
-  sourceRelativeLinksProjectFolder = "/docs"
-
-# Menu configuration should come last in this file;
-# leave at least one blank line at the end
-#
-
-#
-# Component projects is a menu for Registry/Notary etc.
-#
-[[menu.main]]
-	name = "Component Projects"
-	identifier = "mn_components"
-	weight = 8
-
-#
 # About
 #
 [[menu.main]]
 	name = "About"
 	identifier = "mn_about"
 	weight = 9
-#
+
+
 # Version
 #
 [[menu.main]]
